@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contagem regressiva</title>
+</head>
+
+<link rel="stylesheet" href="/public/styles/main.css">
+<link rel="stylesheet" href="/public/styles/stopwatch.css">
+<link rel="stylesheet" href="/public/styles/responsive.css">
+
+<body>
+    <header>
+        <a href=# class="stopwatch">
+            <h1>Contagem regressiva</h1>
+        </a>
+        
+        <a href="cronomether.html" class="cronomether">
+            <h1>Cronômetro</h1>
+        </a>
+        
+    </header>
+
+    <div id="container">
+        <div id="content">
+
+            <div id="event-name">
+                <p>Título da contagem regressiva</p>
+                <input type="text" class="eventName" placeholder="Nome do Evento" value="Nome do Evento">
+            </div>
+
+            <div id="date">
+                <p>Contagem regressiva até a data</p>
+                <input type="date" class="date">
+            </div>
+
+            <div id="button">
+                <button class="start">Iniciar</button>
+            </div>
+        </div>
+
+
+        <div id="event-name-title">
+            <h3>Nome do Evento</h3>
+        </div>
+
+        <div id="clock">
+            <div class="date" id="clock-day">
+                <p class="day">00</p>
+                <p>Dias</p>
+            </div>
+
+            <div class="date" id="clock-hours">
+                <p class="hours">00</p>
+                <p>Horas</p>
+            </div>
+
+            <div class="date" id="clock-minutes">
+                <p class="minutes">00</p>
+                <p>Minutos</p>
+            </div>
+
+            <div class="date" id="clock-seconds">
+                <p class="seconds">00</p>
+                <p>Segundos</p>
+            </div>
+        </div>
+
+        <div id="date-to">
+            <p class="demonstration">Data de finalização</p>
+        </div>
+
+        <audio src="/public/assets/sound.mp3"></audio>
+    </div>
+    <!--Contagem regressiva-->
+
+</body>
+    <script src="/public/scripts/main.js"></script>
+    <script src="/public/scripts/stopwatch.js"></script>
+</html>

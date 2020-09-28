@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cronômetro</title>
+</head>
+
+<link rel="stylesheet" href="/public/styles/main.css">
+<link rel="stylesheet" href="/public/styles/cronomether.css">
+
+<body>
+    <header>
+        <a href="index.html" class="stopwatch">
+            <h1>Contagem regressiva</h1>
+        </a>
+        
+        <a href="#" class="cronomether">
+            <h1>Cronômetro</h1>
+        </a>
+        
+    </header>
+
+    <div id="container">
+        <div id="clock">
+            <div class="date" id="clock-hours">
+                <p class="hours">00</p>
+                <p>Horas</p>
+            </div>
+
+            <div class="date" id="clock-minutes">
+                <p class="minutes">00</p>
+                <p>Minutos</p>
+            </div>
+
+            <div class="date" id="clock-seconds">
+                <p class="seconds">00</p>
+                <p>Segundos</p>
+            </div>
+
+            <div class="date" id="clock-mili-seconds">
+                <p class="mili-seconds">00</p>
+                <p>Milissegundos</p>
+            </div>
+        </div>
+
+        <div id="buttons">
+            <button class="start">Iniciar</button>
+            <button class="reset">Resetar</button>
+        </div>
+    </div>
+
+</body>
+    <script src="/public/scripts/main.js"></script>
+    <script src="/public/scripts/cronomether.js"></script>
+</html>

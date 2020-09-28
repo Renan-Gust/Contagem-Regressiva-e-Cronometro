@@ -1,0 +1,136 @@
+#content{
+    height: 50%;
+    width: 30%;
+
+    float: left;
+
+    padding: 5px;
+}
+
+#content #event-name,
+#content #date{
+   margin-bottom: 1rem;
+}
+
+#content #event-name p,
+#content #date p{
+    padding-bottom: 7px;
+
+    font-weight: 700;
+    font-family: Arial, Helvetica, sans-serif;
+
+    color: rgb(94, 93, 93);
+}
+
+#content #event-name input,
+#content #date input{
+    height: 2rem;
+    width: 12rem;
+
+    padding-left: 10px;
+
+    outline: none;
+
+    border: 1px solid #ccc;
+    border-radius: 3px;
+
+    font-size: 14px;
+}
+
+#content #button{
+    width: 50%;
+    text-align: center;
+}
+
+#content #button button{
+    width: 5rem;
+    height: 2rem;
+
+    color: white;
+    background: #F89406;
+
+    border: 1px solid #df8505;
+    border-radius: 3px;
+
+    outline: none;
+    cursor: pointer;
+}
+
+#content #button button:hover{
+    background: #b66e0b;
+}
+
+#event-name-title{
+    text-align: center;
+    float: right;
+
+    width: 70%;
+
+    margin-top: 3rem;
+}
+
+#event-name-title h3{
+    font-size: 1.4rem;
+    font-family: Geneva;
+}
+
+#clock{
+    width: 70%;
+
+    margin-top: 1.5rem;
+    float: right;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#clock #event-name{
+    display: block !important;
+}
+
+#clock .date{
+    margin-right: 20px;
+}
+
+#clock #clock-seconds .seconds{
+    margin: 0;
+    padding: 0;
+
+    border-right: none;
+}
+
+#clock .date p:nth-child(1){
+    font-size: 4rem;
+
+    padding-right: 1rem;
+
+    border-right: 1px solid #ccc;
+
+    text-align: center;
+}
+
+#clock .date p:nth-child(2){
+    font-size: 1rem;
+    text-align: center;
+
+    width: 72.19px;
+
+    color:  rgb(94, 93, 93);;
+}
+
+#date-to{
+    width: 408px;
+
+    margin-top: 16px;
+    margin-right: 232px;
+    float: right;
+
+    border-top: 1px solid #ccc;
+}
+
+#date-to p{
+    text-align: center;
+
+    padding-top: 11.2px;
+}
