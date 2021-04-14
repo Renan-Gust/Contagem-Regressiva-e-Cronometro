@@ -17,4 +17,3 @@ cronomether.addEventListener("click", () => {
     stopwatch.style.background = "none"
     stopwatch.style.borderTop = "none"
 })
-

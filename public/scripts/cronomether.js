@@ -62,10 +62,3 @@ buttonReset.addEventListener("click", () => {
 
     clearInterval(time)
 })
-
-
-
-
-
-
-
