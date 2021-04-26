@@ -9,48 +9,59 @@
 
 <link rel="stylesheet" href="/public/styles/main.css">
 <link rel="stylesheet" href="/public/styles/cronomether.css">
+<link rel="stylesheet" href="/public/styles/clock.css">
+<link rel="stylesheet" href="/public/styles/responsive.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@700&display=swap" rel="stylesheet">
 
 <body>
-    <header>
-        <a href="index.html" class="stopwatch">
-            <h1>Contagem regressiva</h1>
-        </a>
-        
-        <a href="#" class="cronomether">
-            <h1>Cronômetro</h1>
-        </a>
-        
-    </header>
+    <div class="container container-cronomether">
+        <header>
+            <a href="index.html" class="stopwatch">
+                <h1 class="stopwatch">Contagem regressiva</h1>
+            </a>
+            
+            <a href="#" class="cronomether">
+                <h1 class="cronomether selected">Cronômetro</h1>
+            </a>
+        </header>
 
-    <div id="container">
-        <div id="clock">
-            <div class="date" id="clock-hours">
-                <p class="hours">00</p>
-                <p>Horas</p>
+        <div class="content content-cronomether">
+            <div id="clock">
+                <div class="timer">
+                    <div class="time">
+                        <p class="minutes">00</p>
+                    </div>
+    
+                    <p>Minutos</p>
+                </div>
+    
+                <div class="timer">
+                    <div class="time">
+                        <p class="seconds">00</p>
+                    </div>
+    
+                    <p>Segundos</p>
+                </div> 
+    
+                <div class="timer">
+                    <div class="time">
+                        <p class="mili-seconds">00</p>
+                    </div>
+    
+                    <p>M.segundos</p>
+                </div>
             </div>
-
-            <div class="date" id="clock-minutes">
-                <p class="minutes">00</p>
-                <p>Minutos</p>
-            </div>
-
-            <div class="date" id="clock-seconds">
-                <p class="seconds">00</p>
-                <p>Segundos</p>
-            </div>
-
-            <div class="date" id="clock-mili-seconds">
-                <p class="mili-seconds">00</p>
-                <p>Milissegundos</p>
+    
+            <div id="buttons">
+                <button class="start">Iniciar</button>
+                <button class="pause" style="display: none;">Pausar</button>
+                <button class="reset">Resetar</button>
             </div>
         </div>
 
-        <div id="buttons">
-            <button class="start">Iniciar</button>
-            <button class="reset">Resetar</button>
-        </div>
+        <img src="/public/assets/pattern-hills.svg" alt="pattern-hills">
     </div>
-
 </body>
     <script src="/public/scripts/main.js"></script>
     <script src="/public/scripts/cronomether.js"></script>

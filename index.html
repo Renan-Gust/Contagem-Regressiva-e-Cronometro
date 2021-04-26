@@ -9,73 +9,84 @@
 
 <link rel="stylesheet" href="/public/styles/main.css">
 <link rel="stylesheet" href="/public/styles/stopwatch.css">
+<link rel="stylesheet" href="/public/styles/clock.css">
 <link rel="stylesheet" href="/public/styles/responsive.css">
 
+<link href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@700&display=swap" rel="stylesheet">
+
 <body>
-    <header>
-        <a href=# class="stopwatch">
-            <h1>Contagem regressiva</h1>
-        </a>
-        
-        <a href="cronomether.html" class="cronomether">
-            <h1>Cronômetro</h1>
-        </a>
-        
-    </header>
-
-    <div id="container">
-        <div id="content">
-
-            <div id="event-name">
-                <p>Título da contagem regressiva</p>
-                <input type="text" class="eventName" placeholder="Nome do Evento" value="Nome do Evento">
+    <div class="container container-stopwatch">
+        <header>
+            <a href=# class="stopwatch">
+                <h1 class="stopwatch selected">Contagem regressiva</h1>
+            </a>
+            
+            <a href="cronomether.html" class="cronomether">
+                <h1 class="cronomether">Cronômetro</h1>
+            </a>
+            
+        </header>
+    
+        <div class="content content-stopwatch">
+            <div class="stopwatch-details">
+                <h1>Configurar contagem regressiva</h1>
+                <div class="block-input">
+                    <input type="text" class="event-name" placeholder="Nome do Evento">
+                    <input type="date" class="date">
+                </div>
+    
+                <div class="button">
+                    <button class="start">Iniciar</button>
+                </div>
+            </div>
+    
+            <div class="event-name-title">
+                <h3>Nome do Evento</h3>
             </div>
 
-            <div id="date">
-                <p>Contagem regressiva até a data</p>
-                <input type="date" class="date">
-            </div>
+            <div id="clock">
+                <div class="timer">
+                    <div class="time">
+                        <p class="days">00</p>
+                    </div>
+    
+                    <p>Dias</p>
+                </div>
 
-            <div id="button">
-                <button class="start">Iniciar</button>
+                <div class="timer">
+                    <div class="time">
+                        <p class="hours">00</p>
+                    </div>
+    
+                    <p>Horas</p>
+                </div>
+    
+                <div class="timer">
+                    <div class="time">
+                        <p class="minutes">00</p>
+                    </div>
+    
+                    <p>Minutos</p>
+                </div> 
+    
+                <div class="timer">
+                    <div class="time">
+                        <p class="seconds">00</p>
+                    </div>
+    
+                    <p>Segundos</p>
+                </div>
             </div>
+    
+            <div id="date-to">
+                <p class="demonstration">Data de finalização</p>
+            </div>
+    
+            <audio src="/public/assets/sound.mp3"></audio>
         </div>
 
-
-        <div id="event-name-title">
-            <h3>Nome do Evento</h3>
-        </div>
-
-        <div id="clock">
-            <div class="date" id="clock-day">
-                <p class="day">00</p>
-                <p>Dias</p>
-            </div>
-
-            <div class="date" id="clock-hours">
-                <p class="hours">00</p>
-                <p>Horas</p>
-            </div>
-
-            <div class="date" id="clock-minutes">
-                <p class="minutes">00</p>
-                <p>Minutos</p>
-            </div>
-
-            <div class="date" id="clock-seconds">
-                <p class="seconds">00</p>
-                <p>Segundos</p>
-            </div>
-        </div>
-
-        <div id="date-to">
-            <p class="demonstration">Data de finalização</p>
-        </div>
-
-        <audio src="/public/assets/sound.mp3"></audio>
+        <img src="/public/assets/pattern-hills.svg" alt="pattern-hills">
     </div>
-    <!--Contagem regressiva-->
-
 </body>
     <script src="/public/scripts/main.js"></script>
     <script src="/public/scripts/stopwatch.js"></script>

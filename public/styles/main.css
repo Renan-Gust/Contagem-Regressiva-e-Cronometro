@@ -2,25 +2,57 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
+    font-family: 'Red Hat Text', sans-serif;
 }
 
 body{
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 300;
+    font-size: 14px;
 
-    height: 100vh;
-    width: 100vw;
+    background-color: var(--Very-dark-blue);
+    background-image: url(/public/assets/bg-stars.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
 
-    background-image: url("https://static.countingdownto.com/assets/greyzz-52f4bd54c3e5eb29a6cd5aa2f3336117e268fa10994cdc47a1a7f12cbc28a8c9.png");
+:root{
+    /*Primary*/
+    --Grayish-blue: hsl(237, 18%, 59%);
+    --Soft-red: hsl(345, 95%, 68%);
+
+    /*Neutral*/
+    --White: hsl(0, 0%, 100%);
+    --Dark-desaturated-blue: hsl(236, 21%, 26%);
+    --Very-dark-blue: hsl(235, 16%, 14%);
+    --Very-dark-blue-2: hsl(234, 17%, 12%);
+}
+
+.container{
+    height: 100%;
+}
+
+.container img{
+    width: 100%;
+}
+
+.content{
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    overflow: hidden;
 }
 
 header{
     padding-top: 3%;
     margin: 0 auto;
 
-    width: 80%;
-
     display: flex;
+
+    border-bottom: 1px solid var(--Soft-red);
+    padding-bottom: 10px;
 }
 
 header a{
@@ -30,23 +62,15 @@ header a{
     text-decoration: none;
 
     border: none;
-    background: none;
     outline: none;
 
     cursor: pointer;
 }
 
 header h1{
-    color: black;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: var(--White);
 }
 
-#container{
-    height: 85%;
-    width: 80%;
-
-    margin: 0 auto 0;
-    padding-top: 1rem;
-
-    border-top: 1px solid #ccc;
+header h1.selected{
+    color: var(--Soft-red);
 }

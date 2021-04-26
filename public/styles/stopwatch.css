@@ -1,136 +1,137 @@
-#content{
-    height: 50%;
-    width: 30%;
-
-    float: left;
-
-    padding: 5px;
-}
-
-#content #event-name,
-#content #date{
-   margin-bottom: 1rem;
-}
-
-#content #event-name p,
-#content #date p{
-    padding-bottom: 7px;
-
-    font-weight: 700;
-    font-family: Arial, Helvetica, sans-serif;
-
-    color: rgb(94, 93, 93);
-}
-
-#content #event-name input,
-#content #date input{
-    height: 2rem;
-    width: 12rem;
-
-    padding-left: 10px;
-
-    outline: none;
-
-    border: 1px solid #ccc;
-    border-radius: 3px;
-
-    font-size: 14px;
-}
-
-#content #button{
-    width: 50%;
-    text-align: center;
-}
-
-#content #button button{
-    width: 5rem;
-    height: 2rem;
-
-    color: white;
-    background: #F89406;
-
-    border: 1px solid #df8505;
-    border-radius: 3px;
-
-    outline: none;
-    cursor: pointer;
-}
-
-#content #button button:hover{
-    background: #b66e0b;
-}
-
-#event-name-title{
-    text-align: center;
-    float: right;
-
-    width: 70%;
-
-    margin-top: 3rem;
-}
-
-#event-name-title h3{
-    font-size: 1.4rem;
-    font-family: Geneva;
-}
-
-#clock{
-    width: 70%;
-
-    margin-top: 1.5rem;
-    float: right;
+.content-stopwatch{
+    margin-top: 50px;
 
     display: flex;
-    justify-content: center;
     align-items: center;
 }
 
-#clock #event-name{
-    display: block !important;
+.content-stopwatch .stopwatch-details{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-#clock .date{
-    margin-right: 20px;
+.stopwatch-details h1{
+    color: var(--White);
+    font-size: 2rem;
 }
 
-#clock #clock-seconds .seconds{
-    margin: 0;
-    padding: 0;
-
-    border-right: none;
+.stopwatch-details .block-input{
+    margin: 30px 0;
 }
 
-#clock .date p:nth-child(1){
-    font-size: 4rem;
-
-    padding-right: 1rem;
-
-    border-right: 1px solid #ccc;
-
-    text-align: center;
-}
-
-#clock .date p:nth-child(2){
+.block-input input.event-name,
+.block-input input.date{
+    border: none;
+    outline: none;
     font-size: 1rem;
-    text-align: center;
 
-    width: 72.19px;
+    margin: 0 5px;
+    padding-left: 10px;
+    height: 45px;
+    width: 245px;
 
-    color:  rgb(94, 93, 93);;
+    border-radius: 5px;
+
+    color: var(--White);
+    background: var(--Dark-desaturated-blue);
 }
 
-#date-to{
-    width: 408px;
+::-webkit-input-placeholder {
+    color: var(--White);
+}
 
-    margin-top: 16px;
-    margin-right: 232px;
-    float: right;
+.stopwatch-details .button button{
+    width: 250px;
+    height: 60px;
 
-    border-top: 1px solid #ccc;
+    color: var(--White);
+    background: var(--Soft-red);
+    font-size: 1.4rem;
+
+    border-radius: 3px;
+    border: none;
+    outline: none;
+    cursor: pointer; 
+    
+    transition: 0.3s;
+}
+
+.button button:hover{
+    background: #fb6087ab;
+}
+
+.content-stopwatch .event-name-title{
+    margin: 52px 0;
+    font-size: 1.5rem;
+}
+
+.event-name-title h3{
+    color: var(--White);
+}
+
+.content-stopwatch #date-to{
+    width: 666px;
+    margin-top: 20px;
+    border-top: 1px solid var(--Soft-red);
+    
+    text-align: center;
 }
 
 #date-to p{
-    text-align: center;
+    margin-top: 20px;
+    font-size: 1.4rem;
+    color: var(--White);
+}
 
-    padding-top: 11.2px;
+/*Responsive stopwatch*/
+@media (min-width: 320px){
+    .content-stopwatch{
+        margin-top: 30px;
+        height: initial;
+    }
+
+    .content-stopwatch #clock{
+        display: block;
+    }
+
+    #clock .timer .time{
+        width: 100%;
+        height: initial;
+    }
+
+    .timer p:nth-child(2){
+        margin: 15px 0;
+    }
+
+    .container-stopwatch img{
+        position: relative;
+        top: 5px;
+    }
+}
+
+@media (min-width: 768px){
+    .content-stopwatch{
+        height: 500px;
+        margin-top: 0;
+    }
+
+    .content-stopwatch #clock{
+        display: flex;
+    }
+
+    #clock .timer .time{
+        width: 150px;
+        height: 150px;
+    }
+
+    .timer p:nth-child(2){
+        margin: 15px 0 0 0;
+    }
+
+    .container img{
+        position: relative;
+        top: 5px;
+    }
 }

@@ -1,15 +1,15 @@
-var hours = document.querySelector(".hours")
 var minutes = document.querySelector(".minutes")
 var seconds = document.querySelector(".seconds")
 var miliSeconds = document.querySelector(".mili-seconds")
 
-var clockHours = 0
 var clockMinutes = 0
 var clockSeconds = 0
 var clockMiliSeconds = 0
 
-//Iniciar a Contagem
-var buttonStart = document.querySelector(".start")
+//Start couting
+var buttonStart = document.querySelector("button.start")
+var buttonPause = document.querySelector("button.pause")
+var buttonReset = document.querySelector("button.reset")
 
 var time;
 
@@ -18,7 +18,7 @@ buttonStart.addEventListener("click", () => {
         clockMiliSeconds++
         miliSeconds.innerHTML = clockMiliSeconds
 
-        //Milissegundos
+        //Milliseconds
         if (clockMiliSeconds == 100) {
 
             clockMiliSeconds = 0
@@ -27,7 +27,7 @@ buttonStart.addEventListener("click", () => {
             seconds.innerHTML = clockSeconds
         }
 
-        //Segundos
+        //Seconds
         if (clockSeconds == 60) {
             clockSeconds = 0
             clockMinutes++
@@ -35,30 +35,37 @@ buttonStart.addEventListener("click", () => {
             minutes.innerHTML = clockMinutes
         }
 
-        //Minutos
+        //Minutes
         if (clockMinutes == 60) {
             clockMinutes = 0
-            clockHours++
-
-            hours.innerHTML = clockHours
         }
 
     }, 10);
-        
+
+    buttonStart.style.display = "none"
+    buttonPause.style.display = "block"    
 })
 
-//Resetar contagem
-var buttonReset = document.querySelector(".reset")
+//Pause counting
+buttonPause.addEventListener("click", () => {
+    clearInterval(time)
+
+    buttonStart.style.display = "block"
+    buttonPause.style.display = "none"
+})
+
+//Restart counting
 buttonReset.addEventListener("click", () => {
     miliSeconds.innerHTML = "00"
     seconds.innerHTML = "00"
     minutes.innerHTML = "00"
-    hours.innerHTML = "00"
 
     clockMiliSeconds = 0
     clockSeconds = 0
     clockMinutes = 0
-    clockHours = 0
 
     clearInterval(time)
+
+    buttonStart.style.display = "block"
+    buttonPause.style.display = "none" 
 })

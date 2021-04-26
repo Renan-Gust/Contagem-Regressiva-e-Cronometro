@@ -1,123 +1,63 @@
-@media (max-width: 1024px){
-    #date-to {
-        margin-right: 5.5rem;
-    }
-}
-
-@media (max-width: 768px){
-    header a:nth-child(2){
-        margin-top: 2rem;
-    }
-
-    #container{
-       width: 90%;
-    }
-
-    #clock{
-        padding-left: 3rem;
-        margin-top: 1.4rem;
-
-        text-align: center;
-    }
-
-    #date-to{
-        margin: 14.4px 24px 0 0;
-    }
-}
-
-@media (max-width: 425px){ /*Mobile M - 375px*/
+/*Responsive cronomether*/
+@media (min-width: 320px){
     header{
-        width: 85%;
-        margin: 0;
-    }
-
-    header a:nth-child(2){
-        margin-top: 1rem;
+        align-items: center;
+        width: 100%;
     }
 
     header a h1{
-        font-size: 1.4rem;
+        font-size: clamp(1.2rem, 5vw, 2rem);
     }
 
-    #container{
-        height: 88%;
-        width: 85%;
-        margin: 0;
+    .content-cronomether{
+        margin-top: 30px;
+        height: initial;
     }
 
-    #content{
-        height: 35%;
+    .content-cronomether #clock{
+        display: block;
+    }
+
+    #clock .timer .time{
         width: 100%;
-
-        text-align: center;
-        padding: 0;   
+        height: initial;
     }
 
-    #content #button{
-        width: 100%;
+    .timer p:nth-child(2){
+        margin: 15px 0;
     }
 
-    #event-name-title{
-        margin: 0 0 10px 0;
-
-        width: 85%;
-    }
-
-    #clock{
-        width: 100%;
-
-        padding: 0;
-        margin: 0;
-
-        float: none;
-    }
-    
-    #clock .date{
-        margin-right: 7px;
-    }
-
-    #clock .date p:nth-child(1){
-        font-size: 3rem;
-
-        padding-right: 0;
-    }
-
-    #clock #clock-seconds{
-        margin: 0;
-    }
-
-    #clock .date p:nth-child(2){
-        font-size: 0.8rem;
-
-        padding-right: 5px;
-    }
-
-    #clock #clock-seconds p:nth-child(2){
-        padding-right: 0;
-    }
-
-    #clock #clock-day p:nth-child(1),
-    #clock #clock-hours p:nth-child(1),
-    #clock #clock-minutes p:nth-child(1){
-        padding-right: 7px;
-    }
-
-    #date-to{
-        margin: 10px 0 0 0;
-        width: 100%;
-    }
-
-    #date-to p{
-        padding-top: 7px;
+    .container-cronomether img{
+        position: relative;
+        top: 5px;
     }
 }
 
-@media (max-width: 320px){
+@media (min-width: 768px){
     header{
-        width: 100%;
+        width: 80%;
     }
 
-    #container{
-        width: 100%;
+    .content-cronomether{
+        height: 500px;
+        margin-top: 0;
+    }
+
+    .content-cronomether #clock{
+        display: flex;
+    }
+
+    #clock .timer .time{
+        width: 150px;
+        height: 150px;
+    }
+
+    .timer p:nth-child(2){
+        margin: 15px 0 0 0;
+    }
+
+    .container img{
+        position: relative;
+        top: 5px;
     }
 }

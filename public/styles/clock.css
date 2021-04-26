@@ -1,0 +1,33 @@
+#clock{
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#clock .timer{
+    margin: 0 10px;
+}
+
+.timer p:nth-child(2){
+    text-align: center;
+    font-size: 1.2rem;
+    color: var(--Grayish-blue);
+}
+
+.timer .time{
+    background: var(--Dark-desaturated-blue);
+    text-align: center;
+    border-radius: 8px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.timer .time p{
+    font-size: 5rem;
+    color: var(--Soft-red);
+}

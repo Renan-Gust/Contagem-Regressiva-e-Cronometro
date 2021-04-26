@@ -1,19 +1,12 @@
 var stopwatch = document.querySelector(".stopwatch")
-
-stopwatch.addEventListener("click", () => {
-    stopwatch.style.background = "rgba(204, 204, 204, 0.226)"
-    stopwatch.style.borderTop = "1px solid #ccc"
-
-    cronomether.style.background = "none"
-    cronomether.style.borderTop = "none"
-})
-
 var cronomether = document.querySelector(".cronomether")
 
-cronomether.addEventListener("click", () => {
-    cronomether.style.background = "rgba(204, 204, 204, 0.226)"
-    cronomether.style.borderTop = "1px solid #ccc"
+stopwatch.addEventListener("click", () => {
+    document.querySelector("header h1.stopwatch").classList.add("selected")
+    document.querySelector("header h1.cronomether").classList.remove("selected")
+})
 
-    stopwatch.style.background = "none"
-    stopwatch.style.borderTop = "none"
+cronomether.addEventListener("click", () => {
+    document.querySelector("header h1.stopwatch").classList.remove("selected")
+    document.querySelector("header h1.cronomether").classList.add("selected")
 })
