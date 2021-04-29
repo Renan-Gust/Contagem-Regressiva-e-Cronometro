@@ -1,6 +1,4 @@
 .content-stopwatch{
-    margin-top: 50px;
-
     display: flex;
     align-items: center;
 }
@@ -14,7 +12,6 @@
 
 .stopwatch-details h1{
     color: var(--White);
-    font-size: 2rem;
 }
 
 .stopwatch-details .block-input{
@@ -81,59 +78,36 @@
 
 #date-to p{
     margin-top: 20px;
-    font-size: 1.4rem;
     color: var(--White);
 }
 
 /*Responsive stopwatch*/
-/*
 @media (min-width: 320px){
     .content-stopwatch{
         margin-top: 30px;
         height: initial;
     }
 
-    .content-stopwatch #clock{
-        display: block;
+    .stopwatch-details h1{
+        text-align: center;
+        font-size: clamp(1.6rem, 5vw, 2rem);
+    }
+    
+    .stopwatch-details .block-input{
+        text-align: center;
     }
 
-    #clock .timer .time{
-        width: 100%;
-        height: initial;
+    .block-input input.event-name{
+        margin-bottom: 20px;
     }
 
-    .timer p:nth-child(2){
-        margin: 15px 0;
-    }
-
-    .container-stopwatch img{
-        position: relative;
-        top: 5px;
+    #date-to p{
+        font-size: clamp(1rem, 5vw, 1.4rem);
     }
 }
 
 @media (min-width: 768px){
-    .content-stopwatch{
-        height: 500px;
-        margin-top: 0;
-    }
-
-    .content-stopwatch #clock{
-        display: flex;
-    }
-
-    #clock .timer .time{
-        width: 150px;
-        height: 150px;
-    }
-
-    .timer p:nth-child(2){
-        margin: 15px 0 0 0;
-    }
-
-    .container img{
-        position: relative;
-        top: 5px;
+    .block-input input.event-name{
+        margin-bottom: 0;
     }
 }
-*/
